@@ -1,12 +1,12 @@
 # BitmapCompare
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/047661adb1e34391894f09c6583ec4af)](https://app.codacy.com/gh/Codeuctivity/System.Drawing.Compare?utm_source=github.com&utm_medium=referral&utm_content=Codeuctivity/System.Drawing.Compare&utm_campaign=Badge_Grade_Dashboard) [![Build status](https://ci.appveyor.com/api/projects/status/jsg2b337cyottdwx/branch/master?svg=true)](https://ci.appveyor.com/project/stesee/system-drawing-compare/branch/master) [![Nuget](https://img.shields.io/nuget/v/System.Drawing.Compare.svg)](https://www.nuget.org/packages/BitmapCompare/)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/047661adb1e34391894f09c6583ec4af)](https://app.codacy.com/gh/Codeuctivity/System.Drawing.Compare?utm_source=github.com&utm_medium=referral&utm_content=Codeuctivity/System.Drawing.Compare&utm_campaign=Badge_Grade_Dashboard) [![Build status](https://ci.appveyor.com/api/projects/status/jsg2b337cyottdwx/branch/master?svg=true)](https://ci.appveyor.com/project/stesee/system-drawing-compare/branch/master) [![Nuget](https://img.shields.io/nuget/v/BitmapCompare.svg)](https://www.nuget.org/packages/BitmapCompare/)
 
 What does BitmapCompare do? It compares images
 
 Inspired by the image compare feature "Visual verification API" of [TestApi](https://blogs.msdn.microsoft.com/ivo_manolov/2009/04/20/introduction-to-testapi-part-3-visual-verification-apis/) this code supports comparing images by using a tolerance mask image. That tolerance mask image is a valid image by itself and can be manipulated.
 
-System.Drawing.Compare focus on OS independent support and therefore depends on System.Drawing but is planned to be method semi signature and value compatible with [ImageSharp.Compare](https://github.com/Codeuctivity/ImageSharp.Compare). Expect different error values when using lossy compression formats, lossless formats result in same errors for now. System.Drawing.Compare was created because ImageSharp changed their license to AGPL.
+BitmapCompare focus on OS independent support and depends on System.Drawing. It is planned to be semi compatible with [ImageSharp.Compare](https://github.com/Codeuctivity/ImageSharp.Compare). Expect different error values when using lossy compression formats, lossless formats result in same errors for now. BitmapCompare was created because ImageSharp changed their license to AGPL.
 
 ## Example show case
 
