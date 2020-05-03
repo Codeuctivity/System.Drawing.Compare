@@ -26,10 +26,15 @@ namespace System.Drawing.CompareTestNunit
         [TestCase(jpgCalc1, jpgCalc1, 0, 0, 0, 0, false)]
         [TestCase(jpgCalc0, jpgCalc1, 208886, 1, 2094, 1.2954393605701418d, true)]
         [TestCase(pngCalc0, pngCalc1, 203027, 1, 681, 0.42129618173269651d, false)]
-        public void ShouldVerifyThatImagesAreSemiEqual(string pathPic1, string pathPic2, int expectedAbsoluteError, int expectedMeanError, int expectedPixelErrorCount, double expectedPixelErrorPercentage, bool expectedValuesOsDependent)
+        public void ShouldVerifyThatImagesAreSemiEqual(string pathPic1, string pathPic2, int expectedAbsoluteError, int expectedMeanError, int expectedPixelErrorCount, double expectedPixelErrorPercentage, bool expectedValuesAreOsDependent)
         {
             var diff = Compare.CalcDiff(pathPic1, pathPic2);
-            if (expectedValuesOsDependent && !RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+
+            if (expectedValuesAreOsDependent && !RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            {
+                Assert.Pass();
+            }
+            else
             {
                 Assert.That(diff.AbsoluteError, Is.EqualTo(expectedAbsoluteError), "AbsoluteError");
                 Assert.That(diff.MeanError, Is.EqualTo(expectedMeanError), "MeanError");
