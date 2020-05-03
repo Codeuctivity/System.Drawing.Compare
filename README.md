@@ -1,5 +1,7 @@
 # System.Drawing.Compare
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/047661adb1e34391894f09c6583ec4af)](https://app.codacy.com/gh/Codeuctivity/System.Drawing.Compare?utm_source=github.com&utm_medium=referral&utm_content=Codeuctivity/System.Drawing.Compare&utm_campaign=Badge_Grade_Dashboard)
+
 Compares images
 
 Inspired by the image compare feature "Visual verification API" of [TestApi](https://blogs.msdn.microsoft.com/ivo_manolov/2009/04/20/introduction-to-testapi-part-3-visual-verification-apis/) this code supports comparing images by using a tolerance mask image. That tolerance mask image is a valid image by itself and can be manipulated.
