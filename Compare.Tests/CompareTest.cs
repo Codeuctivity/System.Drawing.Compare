@@ -1,8 +1,8 @@
-using Codeuctivity;
+using Codeuctivity.BitmapCompare;
 using NUnit.Framework;
 using System.Runtime.InteropServices;
 
-namespace System.Drawing.CompareTestNunit
+namespace Codeuctivity.BitmapCompareTests
 {
     public class IntegrationTest
     {

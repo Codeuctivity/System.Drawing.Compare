@@ -1,4 +1,4 @@
-﻿namespace Codeuctivity
+﻿namespace Codeuctivity.BitmapCompare
 {
     /// <summary>
     /// Dto - of compared images

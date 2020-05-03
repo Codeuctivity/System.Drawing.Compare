@@ -1,23 +1,23 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace Codeuctivity
+namespace Codeuctivity.BitmapCompare
 {
     /// <summary>
-    /// System.Drawing.CompareException gets thrown if comparing of images failes
+    /// Codeuctivity.CompareException gets thrown if comparing of images failed
     /// </summary>
     [Serializable]
     public class CompareException : Exception
     {
         /// <summary>
-        /// System.Drawing.CompareException gets thrown if comparing of images failes
+        /// CompareException gets thrown if comparing of images failed
         /// </summary>
         public CompareException()
         {
         }
 
         /// <summary>
-        /// System.Drawing.CompareException gets thrown if comparing of images failes
+        /// CompareException gets thrown if comparing of images failed
         /// </summary>
         /// <param name="message"></param>
         /// <returns></returns>
@@ -26,7 +26,7 @@ namespace Codeuctivity
         }
 
         /// <summary>
-        /// System.Drawing.CompareException gets thrown if comparing of images failes
+        /// CompareException gets thrown if comparing of images failed
         /// </summary>
         /// <param name="message"></param>
         /// <param name="innerException"></param>
@@ -36,7 +36,7 @@ namespace Codeuctivity
         }
 
         /// <summary>
-        /// System.Drawing.CompareException gets thrown if comparing of images failes
+        /// CompareException gets thrown if comparing of images failed
         /// </summary>
         /// <param name="info"></param>
         /// <param name="context"></param>

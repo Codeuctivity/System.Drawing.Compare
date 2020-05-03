@@ -22,7 +22,7 @@ dotnet_csproj:
   informational_version: "{version}"
 
 artifacts:
-  - path: '**\System.Drawing.Compare.*.nupkg'
+  - path: '**\BitmapCompare.*.nupkg'
 
 deploy:
 - provider: NuGet

@@ -1,7 +1,7 @@
-namespace Codeuctivity
+namespace Codeuctivity.BitmapCompare
 {
     /// <summary>
-    /// Dto - outcome of compared images
+    /// POCO - outcome of compared images
     /// </summary>
     public class CompareResult : ICompareResult
     {

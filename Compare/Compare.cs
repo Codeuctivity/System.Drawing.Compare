@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Drawing;
 
-namespace Codeuctivity
+namespace Codeuctivity.BitmapCompare
 {
     /// <summary>
-    /// System.Drawing.Compare, inspired by testapi feature to compare images. Use this class to compare images using a third image as mask of regions where your two compared images may differ.
+    /// Codeuctivity.BitmapCompare.Compare, inspired by testapi feature to compare images. Use this class to compare images using a third image as mask of regions where your two compared images may differ.
     /// </summary>
     public static class Compare
     {
