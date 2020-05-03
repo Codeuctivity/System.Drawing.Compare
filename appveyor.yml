@@ -1,0 +1,27 @@
+version: 1.0.{build}
+image:
+  - Ubuntu
+  - Visual Studio 2019
+skip_tags: true
+configuration: Release
+before_build:
+  - ps: >-
+      nuget restore
+
+build:
+  project: Compare.sln
+  verbosity: minimal
+
+dotnet_csproj:
+  patch: true
+  file: '**\*.csproj'
+  version: "{version}"
+  package_version: "{version}-prerelease"
+  assembly_version: "{version}"
+  file_version: "{version}"
+  informational_version: "{version}"
+
+artifacts:
+  - path: '**\System.Drawing.Compare.*.nupkg'
+
+

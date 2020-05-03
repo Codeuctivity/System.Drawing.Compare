@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29326.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A1B6F6C3-ECBE-471C-AE18-199DEF5982C3}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		appveyor.yml = appveyor.yml
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Compare", "Compare\Compare.csproj", "{3CF66DB3-DD9C-4212-AFD9-CB605B29D827}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompareTests", "Compare.Tests\CompareTests.csproj", "{E289B541-10E6-4EB1-984D-503A50AFE83D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3CF66DB3-DD9C-4212-AFD9-CB605B29D827}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CF66DB3-DD9C-4212-AFD9-CB605B29D827}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CF66DB3-DD9C-4212-AFD9-CB605B29D827}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CF66DB3-DD9C-4212-AFD9-CB605B29D827}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E289B541-10E6-4EB1-984D-503A50AFE83D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E289B541-10E6-4EB1-984D-503A50AFE83D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E289B541-10E6-4EB1-984D-503A50AFE83D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E289B541-10E6-4EB1-984D-503A50AFE83D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC72E02E-48E4-4DDE-B1FF-CEF86C9DFCAB}
+	EndGlobalSection
+EndGlobal
