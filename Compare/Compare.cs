@@ -18,11 +18,9 @@ namespace Codeuctivity.BitmapCompare
         /// <returns>True if every pixel of actual is equal to expected</returns>
         public static bool ImageAreEqual(string actual, string expected)
         {
-            using (var actualImage = (Bitmap)Image.FromFile(actual))
-            using (var expectedImage = (Bitmap)Image.FromFile(expected))
-            {
-                return ImageAreEqual(actualImage, expectedImage);
-            }
+            using var actualImage = (Bitmap)Image.FromFile(actual);
+            using var expectedImage = (Bitmap)Image.FromFile(expected);
+            return ImageAreEqual(actualImage, expectedImage);
         }
 
         /// <summary>
@@ -75,12 +73,10 @@ namespace Codeuctivity.BitmapCompare
         /// <returns>Mean and absolute pixel error</returns>
         public static ICompareResult CalcDiff(string pathActualImage, string pathExpectedImage, string pathMaskImage)
         {
-            using (var actual = (Bitmap)Image.FromFile(pathActualImage))
-            using (var expected = (Bitmap)Image.FromFile(pathExpectedImage))
-            using (var mask = (Bitmap)Image.FromFile(pathMaskImage))
-            {
-                return CalcDiff(actual, expected, mask);
-            }
+            using var actual = (Bitmap)Image.FromFile(pathActualImage);
+            using var expected = (Bitmap)Image.FromFile(pathExpectedImage);
+            using var mask = (Bitmap)Image.FromFile(pathMaskImage);
+            return CalcDiff(actual, expected, mask);
         }
 
         /// <summary>
@@ -91,11 +87,9 @@ namespace Codeuctivity.BitmapCompare
         /// <returns>Mean and absolute pixel error</returns>
         public static ICompareResult CalcDiff(string pathActualImage, string pathExpectedImage)
         {
-            using (var actual = (Bitmap)Image.FromFile(pathActualImage))
-            using (var expected = (Bitmap)Image.FromFile(pathExpectedImage))
-            {
-                return CalcDiff(actual, expected);
-            }
+            using var actual = (Bitmap)Image.FromFile(pathActualImage);
+            using var expected = (Bitmap)Image.FromFile(pathExpectedImage);
+            return CalcDiff(actual, expected);
         }
 
         /// <summary>
@@ -124,8 +118,8 @@ namespace Codeuctivity.BitmapCompare
                         pixelErrorCount += (r + g + b) > 0 ? 1 : 0;
                     }
                 }
-                var meanError = absoluteError / quantity;
-                var pixelErrorPercentage = pixelErrorCount / (double)quantity * 100;
+                var meanError = (double)absoluteError / quantity;
+                var pixelErrorPercentage = ((double)pixelErrorCount / quantity) * 100;
                 return new CompareResult(absoluteError, meanError, pixelErrorCount, pixelErrorPercentage);
             }
             throw new CompareException(sizeDiffersExceptionMessage);
@@ -195,11 +189,9 @@ namespace Codeuctivity.BitmapCompare
         /// <returns>Image representing diff, black means no diff between actual image and expected image, white means max diff</returns>
         public static Bitmap CalcDiffMaskImage(string pathActualImage, string pathExpectedImage)
         {
-            using (var actual = (Bitmap)Image.FromFile(pathActualImage))
-            using (var expected = (Bitmap)Image.FromFile(pathExpectedImage))
-            {
-                return CalcDiffMaskImage(actual, expected);
-            }
+            using var actual = (Bitmap)Image.FromFile(pathActualImage);
+            using var expected = (Bitmap)Image.FromFile(pathExpectedImage);
+            return CalcDiffMaskImage(actual, expected);
         }
 
         /// <summary>

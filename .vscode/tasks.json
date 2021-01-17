@@ -37,6 +37,11 @@
                 "/consoleloggerparameters:NoSummary"
             ],
             "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "update nuget packages",
+            "type": "shell",
+            "command": "'./.vscode/updateNuget.sh'"
         }
     ]
 }

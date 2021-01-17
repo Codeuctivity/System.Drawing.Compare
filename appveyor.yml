@@ -6,10 +6,13 @@ skip_tags: true
 configuration: Release
 before_build:
   - ps: >-
-      nuget restore
+      dotnet restore
 
 build:
   project: Compare.sln
+  publish_nuget: true
+  publish_nuget_symbols: true
+  use_snupkg_format: true
   verbosity: minimal
 
 dotnet_csproj:
@@ -21,12 +24,12 @@ dotnet_csproj:
   file_version: "{version}"
   informational_version: "{version}"
 
-artifacts:
-  - path: '**\BitmapCompare.*.nupkg'
-
 deploy:
 - provider: NuGet
   api_key:
-    secure: BAGacXk+5m7jd8EvWW6wkYhoVml39WAi7n2Z0odVUKUq5SeWLqixvkPA1I+KbQ1r
+    secure: CTISdGCfnpyC7Rh5vs1pgbuISrkWF34sot0SyVgvu0HQxhNNd+V0Gc4MS+rtJttB
   on:
     branch: master
+    skip_symbols: false
+    on:
+      branch: master
