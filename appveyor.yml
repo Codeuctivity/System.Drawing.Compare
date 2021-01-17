@@ -30,6 +30,3 @@ deploy:
     secure: CTISdGCfnpyC7Rh5vs1pgbuISrkWF34sot0SyVgvu0HQxhNNd+V0Gc4MS+rtJttB
   on:
     branch: master
-    skip_symbols: false
-    on:
-      branch: master
